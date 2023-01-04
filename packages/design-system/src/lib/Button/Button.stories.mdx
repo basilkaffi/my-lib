@@ -1,0 +1,35 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { MDXProvider } from '@mdx-js/react';
+import Button from './Button';
+import { Template, args } from './Button.stories.tsx';
+
+<Meta
+  title="Atoms/Button"
+  component={ Button }
+/>
+
+# Button
+
+Buttons express what action will occur when the user clicks or touches it. Buttons are used to initialize an action, either in the background or foreground of an experience.
+
+### Default Button
+
+<Story name="Button" args={args}>
+  {Template.bind({})}
+</Story>
+
+### Button Properties
+
+<Props of={Button}/>
+
+### Button Color Variants
+
+<Preview>
+  <Button color="blue">Blue</Button>
+  <Button color="green">Green</Button>
+  <Button color="indigo">Indigo</Button>
+  <Button color="red">Red</Button>
+  <Button color="yellow">Yellow</Button>
+  <Button color="light">Light</Button>
+  <Button color="dark">Dark</Button>
+</Preview>
