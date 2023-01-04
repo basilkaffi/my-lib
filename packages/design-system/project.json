@@ -19,6 +19,7 @@
         "tsConfig": "packages/design-system/tsconfig.lib.json",
         "project": "packages/design-system/package.json",
         "entryFile": "packages/design-system/src/index.ts",
+        "postcssConfig": "packages/design-system/postcss.config.js",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
