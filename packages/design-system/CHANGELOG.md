@@ -6,7 +6,7 @@
 
 - ## Initialize Library
 
-  **Summary:** initialize library repo using nx, setup react-library, tailwind, storybook, create atom components button and input (unstylized)
+  **Summary:** initialize library repo using nx, setup react-library, tailwind, storybook, create atom components button and input (unstylized), and add changesets
 
   ### how I do it:
 
@@ -27,3 +27,6 @@
   - update project.json add `"postcssConfig": "packages/design-system/postcss.config.js"` in build options
   - add @storybook/addon-docs for mdx file by running `npm i --save-dev @storybook/addon-docs` and add it in .storybook/main.js
   - create buttton atom component by generate @nrwl/react - component
+  - add changesets: run `npm i @changesets/cli --save-dev`
+  - initialize changeset: run `npx changeset init`
+  - adding this minor update using changeset: run `npx changeset version`
