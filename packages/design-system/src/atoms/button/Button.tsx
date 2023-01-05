@@ -1,3 +1,4 @@
+import '../tailwind-imports.css';
 
 /* eslint-disable-next-line */
 enum Color {
