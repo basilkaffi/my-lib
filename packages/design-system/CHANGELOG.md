@@ -1,5 +1,29 @@
 # @basil/design-system
 
+## 0.1.4
+
+### Patch Changes
+
+- return postcssConfig in project.json
+
+## 0.1.3
+
+### Patch Changes
+
+- third attemp: delete postcssConfig in project.json
+
+## 0.1.2
+
+### Patch Changes
+
+- second try to patch tailwind by add join path specifically
+
+## 0.1.1
+
+### Patch Changes
+
+- import tailwind to button component
+
 ## 0.1.0
 
 ### Minor Changes

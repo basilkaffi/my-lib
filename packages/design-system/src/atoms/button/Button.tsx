@@ -1,4 +1,4 @@
-import '../tailwind-imports.css';
+import '../../tailwind.css';
 
 /* eslint-disable-next-line */
 enum Color {
@@ -33,10 +33,9 @@ function Button({ children, color = 'blue', classname, onClick }: ButtonProps) {
   };
   
   return (
-    <button 
-      type="button"
+    <button
       onClick={onClick}
-      className={`${colorButton[color]} inline-block px-6 py-2.5 font-medium text-xs leading-tight rounded-md shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out" ${classname}`}
+      className={`${colorButton[color]} inline-block px-6 py-2.5 font-medium text-xs leading-tight rounded-md shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out ${classname}`}
     >
       {children}
     </button>
