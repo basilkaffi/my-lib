@@ -9,12 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
   steps:
-  - uses: actions/checkout@v2
-  - name: Install Dependencies
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
       run: npm install
-  - name: Build Library
+    - name: Build Library
       run: npm run build
-  - name: Publish to npm
+    - name: Publish to npm
       run: npm publish
   env:
     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
