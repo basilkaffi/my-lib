@@ -18,11 +18,11 @@ jobs:
         run: npm install
       - name: Build Library
         run: npm run build:design-system
-        name: Add user to npm
+      - name: Add User To NPM
         run: bash -c "npm adduser"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Login to npm
+      - name: Login To NPM
         run: bash -c "npm login"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
