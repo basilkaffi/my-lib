@@ -18,12 +18,6 @@ jobs:
         run: npm install
       - name: Build Library
         run: npm run build:design-system
-      - name: Configure npm
-        run: |
-          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
-          cat .npmrc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish to npm
         run: npm run publish
         env:
