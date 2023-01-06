@@ -20,6 +20,8 @@ jobs:
         run: npm run build:design-system
       - name: Echo NPM_TOKEN
         run: echo "NPM_TOKEN = $NPM_TOKEN"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish to npm
         run: npm run publish
         env:
