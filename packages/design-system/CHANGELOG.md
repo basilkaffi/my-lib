@@ -1,5 +1,23 @@
 # @basil/design-system
 
+## 0.1.6
+
+### Patch Changes
+
+- add pipelin
+
+## 0.1.5
+
+### Patch Changes
+
+- try to use changeset publish instead of changeset version, look if it's automatically publish to npm without needed to run npm publish
+- ps: can't be done still need to run npx changeset version to bump up the version
+- try npx changeset publish again
+- try npm publish outside dist not working
+- try npx changeset publish in dist folder not working
+- if the attempt above work, there will not be another notes in this patch change section
+- it doesn't seems to be working, so i am going to run npm publish inside dist folder as usual
+
 ## 0.1.4
 
 ### Patch Changes

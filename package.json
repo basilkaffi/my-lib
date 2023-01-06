@@ -2,7 +2,10 @@
   "name": "my-lib",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "files": ["dist"],
+  "scripts": {
+    "build:design-system": "nx build design-system"
+  },
   "private": false,
   "devDependencies": {
     "@babel/core": "7.12.13",
