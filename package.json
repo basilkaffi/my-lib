@@ -4,7 +4,8 @@
   "license": "MIT",
   "files": ["dist"],
   "scripts": {
-    "build:design-system": "nx build design-system"
+    "build:design-system": "nx build design-system",
+    "publish": "cd dist/packages/design-system && npm publish"
   },
   "private": false,
   "devDependencies": {
