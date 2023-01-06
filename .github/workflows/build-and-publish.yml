@@ -18,7 +18,15 @@ jobs:
         run: npm install
       - name: Build Library
         run: npm run build:design-system
-      - name: Publish to npm
+        name: Add user to npm
+        run: bash -c "npm adduser"
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Login to npm
+        run: bash -c "npm login"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to npm
         run: npm run publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
