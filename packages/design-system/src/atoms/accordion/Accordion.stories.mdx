@@ -1,0 +1,28 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { MDXProvider } from '@mdx-js/react';
+import Accordion from './Accordion';
+import { Template, args } from './Accordion.stories.tsx';
+
+<Meta title="Atoms/Accordion" component={Accordion} />
+
+# Accordion
+
+This is brief description of Accordion
+
+### Accordion Component
+
+<Story name="Accordion" args={args}>
+  {Template.bind({})}
+</Story>
+
+> This Accordion component going to change according to your input control in canvas
+
+### Accordion Properties
+
+<Props of={Accordion} />
+
+### Default Accordion
+
+<Preview>
+  <Accordion>Default Accordion</Accordion>
+</Preview>

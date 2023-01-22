@@ -3,24 +3,45 @@ import { MDXProvider } from '@mdx-js/react';
 import Button from './Button';
 import { Template, args } from './Button.stories.tsx';
 
-<Meta
-  title="Atoms/Button"
-  component={ Button }
-/>
+<Meta title="Atoms/Button" component={Button} />
 
 # Button
 
 Buttons express what action will occur when the user clicks or touches it. Buttons are used to initialize an action, either in the background or foreground of an experience.
 
-### Default Button
+### Button Component
 
 <Story name="Button" args={args}>
   {Template.bind({})}
 </Story>
 
+> This Button component going to change according to your input control in canvas
+
 ### Button Properties
 
-<Props of={Button}/>
+<Props of={Button} />
+
+### Default Button
+
+<Preview>
+  <Button>Default Button</Button>
+</Preview>
+
+### Button Size
+
+<Preview>
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+</Preview>
+
+### Button Shanpe
+
+<Preview>
+  <Button shape="circle">Circle</Button>
+  <Button shape="round">Round</Button>
+  <Button shape="square">Square</Button>
+</Preview>
 
 ### Button Color Variants
 
@@ -32,4 +53,30 @@ Buttons express what action will occur when the user clicks or touches it. Butto
   <Button color="yellow">Yellow</Button>
   <Button color="light">Light</Button>
   <Button color="dark">Dark</Button>
+</Preview>
+
+### Button Color Variants (Disabled)
+
+<Preview>
+  <Button disabled color="blue">
+    Blue
+  </Button>
+  <Button disabled color="green">
+    Green
+  </Button>
+  <Button disabled color="indigo">
+    Indigo
+  </Button>
+  <Button disabled color="red">
+    Red
+  </Button>
+  <Button disabled color="yellow">
+    Yellow
+  </Button>
+  <Button disabled color="light">
+    Light
+  </Button>
+  <Button disabled color="dark">
+    Dark
+  </Button>
 </Preview>

@@ -1,0 +1,28 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { MDXProvider } from '@mdx-js/react';
+import SidenavContainer from './SidenavContainer';
+import { Template, args } from './SidenavContainer.stories.tsx';
+
+<Meta title="Atoms/SidenavContainer" component={SidenavContainer} />
+
+# SidenavContainer
+
+This is brief description of SidenavContainer
+
+### SidenavContainer Component
+
+<Story name="SidenavContainer" args={args}>
+  {Template.bind({})}
+</Story>
+
+> This SidenavContainer component going to change according to your input control in canvas
+
+### SidenavContainer Properties
+
+<Props of={SidenavContainer} />
+
+### Default SidenavContainer
+
+<Preview>
+  <SidenavContainer />
+</Preview>

@@ -1,0 +1,31 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { MDXProvider } from '@mdx-js/react';
+import {{pascalCase name}} from './{{pascalCase name}}';
+import { Template, args } from './{{pascalCase name}}.stories.tsx';
+
+<Meta
+  title="{{pascalCase section}}/{{pascalCase name}}"
+  component={ {{pascalCase name}} }
+/>
+
+# {{pascalCase name}}
+
+This is brief description of {{pascalCase name}}
+
+### {{pascalCase name}} Component
+
+<Story name="{{pascalCase name}}" args={args}>
+  {Template.bind({})}
+</Story>
+
+> This {{pascalCase name}} component going to change according to your input control in canvas
+
+### {{pascalCase name}} Properties
+
+<Props of={ {{pascalCase name}} }/>
+
+### Default {{pascalCase name}}
+
+<Preview>
+  <{{pascalCase name}} />
+</Preview>
