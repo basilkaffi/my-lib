@@ -2,12 +2,13 @@ import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
 import { MDXProvider } from '@mdx-js/react';
 import Accordion from './Accordion';
 import { Template, args } from './Accordion.stories.tsx';
+import '../../tailwind.css';
 
 <Meta title="Atoms/Accordion" component={Accordion} />
 
 # Accordion
 
-This is brief description of Accordion
+Accordion is a component that has a behavior to expand or collapse to show or hide its children component when user click it. by default this component is style-less.
 
 ### Accordion Component
 
@@ -24,5 +25,31 @@ This is brief description of Accordion
 ### Default Accordion
 
 <Preview>
-  <Accordion>Default Accordion</Accordion>
+  <Accordion title="Click Me to Collapse/Expand">
+    <p className="py-2 px-4">
+      This is a dummy paragraph as a content of this accordion
+    </p>
+  </Accordion>
+</Preview>
+
+### Custom Accordion style using `containerClassName` and `titleClassName`
+
+<Preview>
+  <Accordion
+    title="Side Menu"
+    containerClassName="bg-slate-100 rounded-md"
+    titleClassName="text-gray-700 font-bold py-2 pl-4 hover:bg-slate-200 rounded-md"
+  >
+    <ul className="pl-4 font-semibold">
+      <li className="py-2 pl-2 cursor-pointer hover:bg-slate-200 rounded-md">
+        Side Submenu #1
+      </li>
+      <li className="py-2 pl-2 cursor-pointer hover:bg-slate-200 rounded-md">
+        Side Submenu #2
+      </li>
+      <li className="py-2 pl-2 cursor-pointer hover:bg-slate-200 rounded-md">
+        Side Submenu #3
+      </li>
+    </ul>
+  </Accordion>
 </Preview>

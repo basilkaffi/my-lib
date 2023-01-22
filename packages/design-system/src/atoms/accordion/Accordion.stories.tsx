@@ -4,13 +4,10 @@ import Accordion from './Accordion';
 export const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args} />;
 
 export const args = {
-    title: 'Accordion Menu',
+    title: 'Click to Expand/Collapse',
     children: (
-        <ul>
-            <li>submenu #1</li>
-            <li>submenu #2</li>
-            <li>submenu #3</li>
-            <li>submenu #4</li>
-        </ul>
+        <p className="py-2 px-4">
+          This is a dummy paragraph as a content of this accordion
+        </p>
     )
 }

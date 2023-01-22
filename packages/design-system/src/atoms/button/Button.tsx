@@ -26,7 +26,6 @@ enum Shape {
 
 export interface ButtonProps {
   children: React.ReactNode;
-  classname?: string;
   color?: `${Color}`;
   size?: `${Size}`;
   shape?: `${Shape}`;
@@ -34,7 +33,7 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-function Button({ children, color = 'blue', classname, onClick, shape = 'round', size = 'md', disabled = false }: ButtonProps) {
+function Button({ children, color = 'blue', onClick, shape = 'round', size = 'md', disabled = false }: ButtonProps) {
 
   const buttonColor = {
     [Color.BLUE]: 'bg-blue-500 text-white hover:bg-blue-600 focus:bg-blue-600 active:bg-blue-700 disabled:opacity-50 disabled:bg-blue-600',
@@ -44,7 +43,7 @@ function Button({ children, color = 'blue', classname, onClick, shape = 'round',
     [Color.RED]: 'bg-pink-600 text-white hover:bg-pink-700 focus:bg-pink-700 active:bg-pink-800 disabled:opacity-50 disabled:bg-pink-700',
     [Color.YELLOW]: 'bg-yellow-500 text-white hover:bg-yellow-600 focus:bg-yellow-600 active:bg-yellow-700 disabled:opacity-50 disabled:bg-yellow-600',
     [Color.LIGHT]: 'bg-gray-200 text-gray-700 hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-400 disabled:opacity-50 disabled:bg-gray-300',
-    [Color.DARK]: 'bg-gray-700 text-white hover:bg-gray-900 focus:bg-gray-900 active:bg-gray-900 disabled:opacity-50 disabled:bg-gray-800',
+    [Color.DARK]: 'bg-gray-700 text-white hover:bg-gray-800 focus:bg-gray-800 active:bg-gray-900 disabled:opacity-50 disabled:bg-gray-800',
   };
 
   const buttonSize = {
@@ -58,12 +57,14 @@ function Button({ children, color = 'blue', classname, onClick, shape = 'round',
     [Shape.CIRCLE]: 'rounded-full',
     [Shape.SQUARE]: 'rounded-none',
   }
+
+  const defaultButtonStyle = 'font-medium py inline-block shadow-md disabled:shadow-none hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out';
   
   return (
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`${buttonColor[color]} ${buttonSize[size]} ${buttonShape[shape]} font-medium py inline-block shadow-md disabled:shadow-none hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out ${classname}`}
+      className={`${buttonColor[color]} ${buttonSize[size]} ${buttonShape[shape]} ${defaultButtonStyle}`}
     >
       {children}
     </button>
