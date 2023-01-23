@@ -2,7 +2,6 @@ import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
 import { MDXProvider } from '@mdx-js/react';
 import Accordion from './Accordion';
 import { Template, args } from './Accordion.stories.tsx';
-import '../../tailwind.css';
 
 <Meta title="Atoms/Accordion" component={Accordion} />
 
@@ -25,9 +24,12 @@ Accordion is a component that has a behavior to expand or collapse to show or hi
 ### Default Accordion
 
 <Preview>
-  <Accordion title="Click Me to Collapse/Expand">
+  <Accordion title="Default Accordion">
     <p className="py-2 px-4">
-      This is a dummy paragraph as a content of this accordion
+      This is a dummy paragraph as a content of this accordion. This is a dummy
+      paragraph as a content of this accordion. This is a dummy paragraph as a
+      content of this accordion. This is a dummy paragraph as a content of this
+      accordion. This is a dummy paragraph as a content of this accordion.
     </p>
   </Accordion>
 </Preview>
@@ -37,18 +39,18 @@ Accordion is a component that has a behavior to expand or collapse to show or hi
 <Preview>
   <Accordion
     title="Side Menu"
-    containerClassName="bg-slate-100 rounded-md"
-    titleClassName="text-gray-700 font-bold py-2 pl-4 hover:bg-slate-200 rounded-md"
+    containerClassName="bg-blue-600 rounded-md w-72"
+    titleClassName="text-gray-100 font-bold py-2 pl-4 hover:bg-blue-800 active:bg-blue-900 rounded-md"
   >
-    <ul className="pl-4 font-semibold">
-      <li className="py-2 pl-2 cursor-pointer hover:bg-slate-200 rounded-md">
-        Side Submenu #1
+    <ul className="font-semibold text-gray-50">
+      <li className="py-2 cursor-pointer hover:bg-blue-800 active:bg-blue-900 rounded-md">
+        <span className="pl-6">Side Submenu #1</span>
       </li>
-      <li className="py-2 pl-2 cursor-pointer hover:bg-slate-200 rounded-md">
-        Side Submenu #2
+      <li className="py-2 cursor-pointer hover:bg-blue-800 active:bg-blue-900 rounded-md">
+        <span className="pl-6">Side Submenu #2</span>
       </li>
-      <li className="py-2 pl-2 cursor-pointer hover:bg-slate-200 rounded-md">
-        Side Submenu #3
+      <li className="py-2 cursor-pointer hover:bg-blue-800 active:bg-blue-900 rounded-md">
+        <span className="pl-6">Side Submenu #3</span>
       </li>
     </ul>
   </Accordion>

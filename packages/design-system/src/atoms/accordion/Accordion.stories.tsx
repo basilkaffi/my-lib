@@ -6,8 +6,11 @@ export const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {
 export const args = {
     title: 'Click to Expand/Collapse',
     children: (
-        <p className="py-2 px-4">
+        <p>
+          This is a dummy paragraph as a content of this accordion. 
+          This is a dummy paragraph as a content of this accordion. 
+          This is a dummy paragraph as a content of this accordion. 
           This is a dummy paragraph as a content of this accordion
         </p>
-    )
+    ),
 }

@@ -30,8 +30,8 @@ function Accordion({ title, children, isExpanded, containerClassName, titleClass
   };
 
   const dynamicHeight = () => {
-    return isExpand ? { height: `${content.current?.scrollHeight}px` } : { height: '0' }
-  }
+    return isExpand ? { height: `${content.current?.scrollHeight}px` } : { height: '0' };
+  };
 
   const transitionStyle = 'overflow-hidden transition-all ease-out duration-200';
 
@@ -43,6 +43,6 @@ function Accordion({ title, children, isExpanded, containerClassName, titleClass
       </div>
     </div>
   )
-}
+};
 
 export default Accordion;
